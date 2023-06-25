@@ -1,0 +1,2 @@
+add_subdirectory(shr_mem_reader)
+add_subdirectory(shr_mem_writer)
