@@ -1,5 +1,5 @@
 #include "shr_mem_creator.h"
-#include "../Constants.h"
+#include "Constants.h"
 
 #include <stdexcept>
 #include <cerrno>

@@ -1,5 +1,5 @@
 #include "shr_mem_reader.h"
-#include "../Constants.h"
+#include "Constants.h"
 
 #include <iostream>
 #include <memory>
