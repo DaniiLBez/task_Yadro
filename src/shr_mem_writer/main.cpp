@@ -1,20 +1,23 @@
 #include "shr_mem_creator.h"
+#include "../Constants.h"
+
+#include <iostream>
 
 int main() {
     SharedMemoryConfigBuilder builder;
 
-    std::shared_ptr<SharedMemoryConfig> config = builder.Name("/shm-example").Size(1000).Message("Hello World!");
+    std::unique_ptr<SharedMemoryConfig> config = builder.Name(NAME).Size(SIZE).Message(MESSAGE);
 
-    auto creator = std::make_shared<SharedMemoryCreator>(config);
+    auto creator = std::make_unique<SharedMemoryCreator>(std::move(config));
 
     try {
         creator->Create();
 
-        std::cout << config->name << std::endl;
+        std::cout << creator->getConfig().name << std::endl;
 
         creator->CloseMemorySegment();
     }
-    catch (std::exception& e) {
+    catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
     }
 
