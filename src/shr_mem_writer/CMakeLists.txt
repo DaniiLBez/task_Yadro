@@ -4,6 +4,6 @@ project(shr_mem_writer)
 set(CXX_STANDARD 17)
 set(target_name shr_mem_writer)
 
-add_executable(${target_name} main.cpp shr_mem_creator.h)
+add_executable(${target_name} main.cpp shr_mem_creator.h shr_mem_creator.cpp)
 
 target_link_libraries(${target_name} rt)
