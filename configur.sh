@@ -9,7 +9,6 @@ docker run --rm -it \
     dev:task_Yadro \
     cmake -DCMAKE_BUILD_TYPE=DEBUG \
     -G Ninja \
-    -DCMAKE_TOOLCHAIN_FILE=/tmp/task_Yadro/clang.toolchain \
     -S /tmp/task_Yadro \
     -B /tmp/task_Yadro/cmake_build 
 
