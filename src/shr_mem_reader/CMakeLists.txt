@@ -7,3 +7,4 @@ set(target_name shr_mem_reader)
 add_executable(${target_name} main.cpp shr_mem_reader.h shr_mem_reader.cpp)
 
 target_link_libraries(${target_name} rt)
+target_include_directories(${target_name} PRIVATE ../../src)
